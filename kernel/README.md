@@ -1,1 +1,0 @@
-# terCAD Kernel Architecture

@@ -1,1 +1,0 @@
-# terCAD Architecture Configuration Layer
