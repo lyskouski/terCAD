@@ -3,9 +3,9 @@
     "short_name": "tercad",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#9B7B7C",
+    "theme_color": "#9B7B7C",
+    "description": "terCAD - Data Quality Gate Portal for Educational Purposes",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
