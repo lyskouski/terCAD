@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './mainMenu.dart';
+import 'package:tercad/mainMenu.dart';
 
 void main() => runApp(const MyApp());
 
