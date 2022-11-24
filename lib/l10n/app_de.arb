@@ -1,0 +1,26 @@
+{
+  "title": "terCAD [Deutsch]",
+  "@title": {
+    "description": "Quality Gate Portal für Bildungszwecke"
+  },
+  "missingContent": "Auf dieser Seite fehlt mittlerweile der Inhalt. Bitte besuchen Sie sie später...",
+  "oeuvre": "Schaffen",
+  "prose": "Prosa",
+  "poetry": "Poesie",
+  "cognition": "Erkenntnis",
+  "mind": "Heranbildung",
+  "methods": "Methoden",
+  "sensorModality": "Sinntotalität",
+  "inContent": "Inhaltlich",
+  "memoryOrganization": "Organisation des Speichers",
+  "timeCharacteristics": "Kenngrößen des Zeitverhaltens",
+  "presenceOfTarget": "Gegenwart von Ziel",
+  "availabilityOfMeans": "Verfügbarkeit von Mitteln",
+  "methodForStoring": "Weise der Lagerung",
+  "symbolicMemory": "Symbolische Gedächtnis",
+  "objects": "Objekte",
+  "exactSciences": "Exakte Wissenschaft",
+  "socialSciences": "Sozialwissenschaften",
+  "humanSciences": "Geisteswissenschaften",
+  "musicEducation": "Musikalische Ausbildung"
+}
