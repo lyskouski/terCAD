@@ -1,31 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:tercad/mainMenu.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() => runApp(const MyApp());
+import 'package:tercad/main_menu.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const appTitle = 'terCAD';
-
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: appTitle,
-      home: MyHomePage(title: appTitle),
+      title: 'terCAD',
+      // localizationsDelegates: AppLocalizations.localizationsDelegates,
+      // supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', ''),
+        Locale('pt', ''),
+      ],
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
 
-  final String title;
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
 
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.title)),
       body: const Center(
         child: Text('By now, content is missing on this page. Please visit it later...'),
       ),
@@ -45,10 +59,12 @@ class MyHomePage extends StatelessWidget {
                 child: Text('Navigation'),
               ),
             ),
-            ...mainMenu.map(buildMainMenu).toList()
+            ...mainMenu.map((tile) => buildMainMenu(context, tile)).toList()
           ],
         ),
       ),
     );
   }
 }
+
+void main() => runApp(const MyApp());
