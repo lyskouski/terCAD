@@ -2,5 +2,26 @@
   "title": "terCAD",
   "@title": {
     "description": "Quality Gate Portal for Educational Purposes"
-  }
+  },
+  "missingContent": "By now, content is missing on this page. Please visit it later...",
+  "oeuvre": "Oeuvre",
+
+  "prose": "Prose",
+  "poetry": "Poetry",
+  "cognition": "Cognition",
+  "mind": "Mind",
+  "methods": "Methods",
+  "sensorModality": "By sensory modality",
+  "inContent": "In Content",
+  "memoryOrganization": "Memory Organization",
+  "timeCharacteristics": "Time Characteristics",
+  "presenceOfTarget": "Presence of Target",
+  "availabilityOfMeans": "Availability of Means",
+  "methodForStoring": "Method for Storing",
+  "symbolicMemory": "Symbolic Memory",
+  "objects": "Objects",
+  "exactSciences": "Exact Sciences",
+  "socialSciences": "Social Sciences",
+  "humanSciences": "Human Sciences",
+  "musicEducation": "Music Education"
 }

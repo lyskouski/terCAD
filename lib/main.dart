@@ -40,8 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(AppLocalizations.of(context)!.title)),
-      body: const Center(
-        child: Text('By now, content is missing on this page. Please visit it later...'),
+      body: Center(
+        child: Text(AppLocalizations.of(context)!.missingContent),
       ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Navigation'),
               ),
             ),
-            ...mainMenu.map((tile) => buildMainMenu(context, tile)).toList()
+            ...getMainMenu(context).map(buildMainMenu).toList()
           ],
         ),
       ),

@@ -1,3 +1,24 @@
 {
-  "title": "terCAD [Portugal]"
+  "title": "terCAD [Portugal]",
+  "missingContent": "Até agora, falta conteúdo nesta página. Por favor, visite-a mais tarde...",
+  "oeuvre": "Criatividade",
+
+  "prose": "Prosa",
+  "poetry": "Poesia",
+  "cognition": "Cognição",
+  "mind": "Mente",
+  "methods": "Métodos",
+  "sensorModality": "Por modalidade sensorial",
+  "inContent": "Em Conteúdo",
+  "memoryOrganization": "Organização da Memória",
+  "timeCharacteristics": "Características do Tempo",
+  "presenceOfTarget": "Presença do Alvo",
+  "availabilityOfMeans": "Disponibilidade de Meios",
+  "methodForStoring": "Método de Armazenamento",
+  "symbolicMemory": "Memória Simbólica",
+  "objects": "Objectos",
+  "exactSciences": "Ciências Exactas",
+  "socialSciences": "Ciências Sociais",
+  "humanSciences": "Ciências Humanas",
+  "musicEducation": "Educação Musical"
 }
