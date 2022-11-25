@@ -12,20 +12,32 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'terCAD',
       // localizationsDelegates: AppLocalizations.localizationsDelegates,
-      // supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      // supportedLocales: AppLocalizations.supportedLocales,
       supportedLocales: [
         Locale('en', ''),
         Locale('pt', ''),
         Locale('de', ''),
         Locale('fr', ''),
       ],
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerator.generateRoute
+    );
+  }
+}
+
+class RouteGenerator {
+  static Route<dynamic> generateRoute(RouteSettings settings) {
+    final args = settings.arguments;
+    return MaterialPageRoute(
+      builder: (context) => getMainContent(context,
+        settings.name == '/' ? AppLocalizations.of(context)!.title : settings.name)
     );
   }
 }

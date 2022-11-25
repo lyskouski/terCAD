@@ -23,10 +23,7 @@ Widget buildMainMenu(BuildContext context, BasicTile tile, {double leftIndent = 
     return ListTile(
       contentPadding: EdgeInsets.only(left: leftIndent),
       title: Text(tile.title ?? errMessage),
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => tile.route(context, tile.title ?? errMessage)),
-      ),
+      onTap: () => Navigator.pushNamed<dynamic>(context, tile.title ?? ''),
     );
   } else {
     return ExpansionTile(
