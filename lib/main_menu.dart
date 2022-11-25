@@ -1,34 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:tercad/main_content.dart';
+
 const double paddingIndent = 12;
+const String errMessage = '[err]';
 
 class BasicTile {
   final String? title;
+  final Function(BuildContext, String) route;
   final List<BasicTile> tiles;
 
   const BasicTile({
     required this.title,
+    this.route = getMainContent,
     this.tiles = const [],
   });
 }
 
-Widget buildMainMenu(BasicTile tile, {double leftIndent = paddingIndent}) {
+Widget buildMainMenu(BuildContext context, BasicTile tile, {double leftIndent = paddingIndent}) {
   if (tile.tiles.isEmpty) {
     return ListTile(
       contentPadding: EdgeInsets.only(left: leftIndent),
-      title: Text(tile.title ?? '[err]'),
-      onTap: () => {
-        // ...
-      },
+      title: Text(tile.title ?? errMessage),
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => tile.route(context, tile.title ?? errMessage)),
+      ),
     );
   } else {
     return ExpansionTile(
       tilePadding: EdgeInsets.only(left: leftIndent),
     //  trailing: const SizedBox.shrink(),
     //  leading: const Icon(Icons.keyboard_arrow_right_outlined),
-      title: Text(tile.title ?? '[err]'),
-      children: tile.tiles.map((tile) => buildMainMenu(tile, leftIndent: paddingIndent + leftIndent)).toList(),
+      title: Text(tile.title ?? errMessage),
+      children: tile.tiles.map((tile) => buildMainMenu(context, tile, leftIndent: paddingIndent + leftIndent)).toList(),
     );
   }
 }
@@ -38,8 +44,12 @@ List<BasicTile> getMainMenu(BuildContext context) {
     BasicTile(
       title: AppLocalizations.of(context)!.oeuvre,
       tiles: [
-        BasicTile(title: AppLocalizations.of(context)!.prose),
-        BasicTile(title: AppLocalizations.of(context)!.poetry),
+        BasicTile(
+          title: AppLocalizations.of(context)!.prose,
+        ),
+        BasicTile(
+          title: AppLocalizations.of(context)!.poetry,
+        ),
       ],
     ),
     BasicTile(
