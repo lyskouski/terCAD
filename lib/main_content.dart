@@ -13,12 +13,12 @@ Scaffold getMainContent(BuildContext context, title) {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const SizedBox(
+          SizedBox(
             height: 42.0,
             child: DrawerHeader(
-              margin: EdgeInsets.all(0.0),
-              padding: EdgeInsets.all(paddingIndent),
-              child: Text('Navigation'),
+              margin: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.all(paddingIndent),
+              child: Text(AppLocalizations.of(context)!.navigation),
             ),
           ),
           ...getMainMenu(context).map((tile) => buildMainMenu(context, tile)).toList()

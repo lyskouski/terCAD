@@ -1,5 +1,9 @@
 {
   "title": "terCAD [Português]",
+  "@title": {
+    "description": "Portal Quality Gate para Fins Educacionais"
+  },
+  "navigation": "Navegação",
   "missingContent": "Até agora, falta conteúdo nesta página. Por favor, visite-a mais tarde...",
   "oeuvre": "Criatividade",
   "prose": "Prosa",

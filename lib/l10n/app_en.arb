@@ -3,6 +3,7 @@
   "@title": {
     "description": "Quality Gate Portal for Educational Purposes"
   },
+  "navigation": "Navigation",
   "missingContent": "By now, content is missing on this page. Please visit it later...",
   "oeuvre": "Oeuvre",
   "prose": "Prose",
