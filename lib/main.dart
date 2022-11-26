@@ -33,12 +33,11 @@ class MyApp extends StatelessWidget {
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
     return MaterialPageRoute(
       settings: settings,
       builder: (context) => getMainContent(
           context,
-          settings.name == '/' ? AppLocalizations.of(context)!.title : settings.name
+          settings.name
         )
     );
   }

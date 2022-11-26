@@ -6,8 +6,9 @@ import 'package:tercad/main_menu.dart';
 
 Scaffold getMainContent(BuildContext context, String? url) {
   var urlBreadCrumbs = (url ?? '').split('/');
+  String? title = url == '/' ? AppLocalizations.of(context)!.title : url;
   return Scaffold(
-    appBar: AppBar(title: Text(url ?? '')),
+    appBar: AppBar(title: Text(title ?? '')),
     body: Padding(
           padding: EdgeInsets.all(24),
           child: Column(
