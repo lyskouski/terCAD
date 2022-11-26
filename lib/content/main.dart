@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 
 import 'package:tercad/main_menu.dart';
 
-Scaffold getMainContent(BuildContext context, title) {
+Scaffold getMainContent(BuildContext context, String? url) {
+  var urlBreadCrumbs = (url ?? '').split('/');
   return Scaffold(
-    appBar: AppBar(title: Text(title)),
-    body: Center(
-      child: Text(AppLocalizations.of(context)!.missingContent),
+    appBar: AppBar(title: Text(url ?? '')),
+    body: Padding(
+          padding: EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              BreadCrumb.builder(
+                itemCount: urlBreadCrumbs.length,
+                builder: (index) {
+                  return BreadCrumbItem(content: Text(urlBreadCrumbs[index]));
+                },
+                divider: const Icon(Icons.chevron_right),
+                overflow: const WrapOverflow(
+                  keepLastDivider: false,
+                  direction: Axis.horizontal,
+                ),
+              ),
+              Center(
+                child: Text(AppLocalizations.of(context)!.missingContent),
+              ),
+            ]
+          ),
     ),
     drawer: Drawer(
       child: ListView(
