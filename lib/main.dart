@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'package:tercad/main_content.dart';
+import 'package:tercad/content/main.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
         Locale('de', ''),
         Locale('fr', ''),
       ],
-      // home: MyHomePage(),
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.generateRoute
     );
@@ -36,8 +35,11 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     return MaterialPageRoute(
-      builder: (context) => getMainContent(context,
-        settings.name == '/' ? AppLocalizations.of(context)!.title : settings.name)
+      settings: settings,
+      builder: (context) => getMainContent(
+          context,
+          settings.name == '/' ? AppLocalizations.of(context)!.title : settings.name
+        )
     );
   }
 }
