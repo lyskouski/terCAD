@@ -1,16 +1,19 @@
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 
 import 'package:tercad/content/main_menu.dart';
 
 Scaffold getMainContent(BuildContext context, String? url) {
-  var urlBreadCrumbs = (url ?? '').split('/');
+  var urlBreadCrumbs = (url ?? '/').split('/');
   String? title = findTileByUrl(url, context)?.title;
+  var locale = AppLocalizations.of(context)!.localeName;
   return Scaffold(
     appBar: AppBar(title: Text(title ?? '')),
     body: Padding(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,8 +36,16 @@ Scaffold getMainContent(BuildContext context, String? url) {
               direction: Axis.horizontal,
             ),
           ),
-          Center(
-            child: Text(AppLocalizations.of(context)!.missingContent),
+          Expanded(
+            child: FutureBuilder(
+              future: DefaultAssetBundle.of(context).loadString('./assets/content/${url}_${locale}.md'),
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return Markdown(data: snapshot.data ?? '');
+                }
+                return Container();
+              }
+            ),
           ),
         ]
       ),
