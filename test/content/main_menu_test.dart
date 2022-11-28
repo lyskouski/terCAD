@@ -1,6 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:tercad/content/main_menu.dart';
 
 void main() {
   testWidgets(
@@ -28,5 +32,21 @@ void main() {
     expect(langEn.keys, equals(langDe.keys));
     expect(langEn.keys, equals(langFr.keys));
     expect(langEn.keys, equals(langPt.keys));
+  });
+
+  testWidgets(
+    'Given URL When title is requested Then given a search result',
+    (WidgetTester tester
+  ) async {
+     await tester.pumpWidget(
+      Builder(
+        builder: (BuildContext context) {
+          var actual = findTileByUrl('/oeuvre/prose', context);
+          expect(actual, AppLocalizations.of(context)!.prose);
+          // The builder function must return a widget
+          return Container();
+        },
+      ),
+    );
   });
 }

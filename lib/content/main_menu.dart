@@ -34,6 +34,31 @@ Widget buildMainMenu(BuildContext context, BasicTile tile, {double leftIndent = 
   }
 }
 
+BasicTile? findTileByUrl(url, context) {
+  return _findTileByUrl(url, AppLocalizations.of(context)!.title, getMainMenu(context));
+}
+
+BasicTile _findTileByUrl(String url, String? defTitle, List<BasicTile> tiles) {
+  BasicTile result = BasicTile(
+    title: defTitle,
+    url: '/'
+  );
+  for (final tile in tiles) {
+    if (tile.url == url) {
+      result = tile;
+      break;
+    }
+    if (tile.tiles.isNotEmpty) {
+      var tmp = _findTileByUrl(url, defTitle, tile.tiles);
+      if (tmp.url == url) {
+        result = tmp;
+        break;
+      }
+    }
+  }
+  return result;
+}
+
 List<BasicTile> getMainMenu(BuildContext context) {
   return <BasicTile>[
     BasicTile(
