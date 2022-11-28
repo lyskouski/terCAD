@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 
-import 'package:tercad/main_menu.dart';
+import 'package:tercad/content/main_menu.dart';
 
 Scaffold getMainContent(BuildContext context, String? url) {
   var urlBreadCrumbs = (url ?? '').split('/');
