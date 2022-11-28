@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
@@ -12,34 +10,34 @@ Scaffold getMainContent(BuildContext context, String? url) {
   return Scaffold(
     appBar: AppBar(title: Text(title ?? '')),
     body: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              BreadCrumb.builder(
-                itemCount: urlBreadCrumbs.length - 1,
-                builder: (index) {
-                  String url = urlBreadCrumbs.sublist(0, index + 1).join('/');
-                  if (url == '') {
-                    url = '/';
-                  }
-                  String? titleBreadCrumb = findTileByUrl(url, context)?.title;
-                  return BreadCrumbItem(
-                    content: Text(titleBreadCrumb ?? ''),
-                    onTap: () => Navigator.of(context).pushNamed(url)
-                  );
-                },
-                divider: const Icon(Icons.chevron_right),
-                overflow: const WrapOverflow(
-                  keepLastDivider: false,
-                  direction: Axis.horizontal,
-                ),
-              ),
-              Center(
-                child: Text(AppLocalizations.of(context)!.missingContent),
-              ),
-            ]
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          BreadCrumb.builder(
+            itemCount: urlBreadCrumbs.length - 1,
+            builder: (index) {
+              String url = urlBreadCrumbs.sublist(0, index + 1).join('/');
+              if (url == '') {
+                url = '/';
+              }
+              String? titleBreadCrumb = findTileByUrl(url, context)?.title;
+              return BreadCrumbItem(
+                content: Text(titleBreadCrumb ?? ''),
+                onTap: () => Navigator.of(context).pushNamed(url)
+              );
+            },
+            divider: const Icon(Icons.chevron_right),
+            overflow: const WrapOverflow(
+              keepLastDivider: false,
+              direction: Axis.horizontal,
+            ),
           ),
+          Center(
+            child: Text(AppLocalizations.of(context)!.missingContent),
+          ),
+        ]
+      ),
     ),
     drawer: Drawer(
       child: ListView(
