@@ -2,18 +2,18 @@
 
 set -e
 
-if [ -z "$AWS-S3-BUCKET" ]; then
-  echo "AWS-S3-BUCKET is not set. Quitting."
+if [ -z "$AWS_S3_BUCKET" ]; then
+  echo "AWS_S3_BUCKET is not set. Quitting."
   exit 1
 fi
 
-if [ -z "$AWS-ACCESS-KEY-ID" ]; then
-  echo "AWS-ACCESS-KEY-ID is not set. Quitting."
+if [ -z "$AWS_ACCESS_KEY_ID" ]; then
+  echo "AWS_ACCESS_KEY_ID is not set. Quitting."
   exit 1
 fi
 
-if [ -z "$AWS-SECRET-ACCESS-KEY" ]; then
-  echo "AWS-SECRET-ACCESS-KEY is not set. Quitting."
+if [ -z "$AWS_SECRET_ACCESS_KEY" ]; then
+  echo "AWS_SECRET_ACCESS_KEY is not set. Quitting."
   exit 1
 fi
 
@@ -31,15 +31,15 @@ fi
 # with past/future actions.
 # https://github.com/lyskouski/terCAD/issues/1
 aws configure --profile terCAD <<-EOF > /dev/null 2>&1
-${AWS-ACCESS-KEY-ID}
-${AWS-SECRET-ACCESS-KEY}
+${AWS_ACCESS_KEY_ID}
+${AWS_SECRET_ACCESS_KEY}
 ${AWS_REGION}
 text
 EOF
 
 # Sync using our dedicated profile and suppress verbose messages.
 # All other flags are optional via the `args:` directive.
-sh -c "aws s3 sync ${SOURCE_DIR:-.} s3://${AWS-S3-BUCKET}/${DEST_DIR} \
+sh -c "aws s3 sync ${SOURCE_DIR:-.} s3://${AWS_S3_BUCKET}/${DEST_DIR} \
               --profile terCAD \
               --no-progress \
               ${ENDPOINT_APPEND} $*"
