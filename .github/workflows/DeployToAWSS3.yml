@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
-    - uses: jakejarvis/s3-sync-action@main
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
          aws-s3-bucket:${{secrets.AWS_S3_BUCKET}}
          aws-access-key-id:${{secrets.AWS_ACCESS_KEY_ID}}
          aws-secret-access-key:${{secrets.AWS_SECRET_ACCESS_KEY}}
+
+    -run: aws s3 sync . s3://tercad.pt --exclude '.git*/*'
