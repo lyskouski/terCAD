@@ -7,15 +7,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      -uses: action/checkout@V2
-      -uses: jakejarvis/s3-sync-action@V2
-
-       with:
-         args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
-
-       env:
+    - uses: action/checkout@main
+    - uses: jakejarvis/s3-sync-action@main
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
          aws-s3-bucket:${{secrets.AWS_S3_BUCKET}}
          aws-access-key-id:${{secrets.AWS_ACCESS_KEY_ID}}
          aws-secret-access-key:${{secrets.AWS_SECRET_ACCESS_KEY}}
