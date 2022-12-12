@@ -41,39 +41,3 @@ On a minefield you have to be the slowest turtle and you'll return back alive, i
 ## Solution (why we)
 
 Scientific Research for the course would be a main corner in our StartUp evolution model, at list, that’ll confirm that the deep analysis and meticulously was preliminary done as a pre-step of creation.
-
-
-## Our Team
-
-
-### Alena Zyhmantovich (Product, Sales, and Quality Manager)
-
-Domain expert that gains together extensive experience of working in the industries with scientists and technical knowledge of various life cycles in a Scientific Software (more than 7 years). Published author of articles and training materials on chemical and biological issues. Active participant and organizer of first international students tournament in chemistry, biology and physics (STONS).
-
-Responsible for the marketing, investor relations and scientific tasks set up.
-
-
-### Anton Zyhmantovich (Front-end Developer, Business Analyst, System Administrator)
-
-Developer with 11 years of experience in various platforms using modern techniques, languages and frameworks, and cross platform applications. In the corner of latest trends in web development and application performance optimization.
-
-
-### Iryna Shepetovetska (Designer, Artist, Translator)
-
-Specialized on corporate design (identity, brandbook), behavioral and adaptive design (landing pages, key visual, promo-sites). MSc In Ecology and Master in Design Studies (MDes) with plenty of courses to keep skills up to date in 3D (Autodesk products) and 2D (Adobe products, Figma) design. Experience since 2014.
-
-Multilingual: NP(5) Ukrainian and Russian, LWP(2) English and Polish, EP(1) French and Portuguese.
-
-
-### Viachaslau Lyskouski (Systems Architect, DevOps, QA Automation Engineer)
-
-PhD ABD with over 20 years as Developer (last 5 years - Systems Architect) with expertise in Delivery Management. Business domains expertise: Bank Ops and Trading, e-Government, Product Lifecycle Management, Agile Transformations, and Computer Simulations in Scientific Research.
-
-Main professional focus on build-in quality products via growing effective, performing and stable team by applied Disciplined Agile Delivery practices at Scale.
-
-
-### Sviatlana Kastsenka (DBA, Backend Developer, Cloud Engineer)
-
-Started working in the IT industry with punch cards, at the origins of e-Governance in Belarus, currently in the acting position of Technical Lead, with her knowledge and experience (more than 40 years) defends the position on every new international project in outsourcing employers’ tenders.
-
-Responsible for High-Load Faulty-Tolerance Databases, Cloud Architecture, and Big-Data.

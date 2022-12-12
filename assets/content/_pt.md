@@ -41,39 +41,3 @@ Num campo minado tem de se ser a tartaruga mais lenta e regressar com vida, no n
 ## Solução (porquê nós)
 
 A Investigação Científica para o curso seria um canto principal no nosso modelo de evolução StartUp, na lista, que confirmará que a análise profunda e meticulosa foi feita preliminarmente como um passo prévio à criação.
-
-
-## A nossa equipa
-
-
-### Alena Zyhmantovich (Gestora de Produto, Vendas, e Qualidade)
-
-Especialista no domínio que ganha em conjunto uma vasta experiência de trabalho nas indústrias com cientistas e conhecimentos técnicos de vários ciclos de vida num Software Científico (mais de 7 anos). Autor publicado de artigos e materiais de formação sobre questões químicas e biológicas. Participante activo e organizador do primeiro torneio internacional de estudantes em química, biologia e física (STONS).
-
-Responsável pelo marketing, relações com investidores e tarefas científicas estabelecidas.
-
-
-### Anton Zyhmantovich (Desenvolvedor de Front-end, Analista de Negócios, Administrador de Sistemas)
-
-Desenvolvedor com 11 anos de experiência em várias plataformas utilizando técnicas modernas, linguagens e estruturas, e aplicações de plataformas cruzadas. No canto das últimas tendências em desenvolvimento web e optimização do desempenho de aplicações.
-
-
-### Iryna Shepetovetska (Designer, Artista, Tradutora)
-
-Especializado em design corporativo (identidade, brandbook), design comportamental e adaptativo (landing pages, key visual, promo-sites). Mestre em Ecologia e Mestre em Estudos de Design (MDes) com muitos cursos para manter as competências actualizadas em design 3D (produtos Autodesk) e 2D (produtos Adobe, Figma). Experiência desde 2014.
-
-Multilingue: NP(5) ucraniano e russo, LWP(2) inglês e polaco, EP(1) francês e português.
-
-
-### Viachaslau Lyskouski (Systems Architect, DevOps, QA Automation Engineer)
-
-PhD ABD com mais de 20 anos como Desenvolvedor (últimos 5 anos - Arquitecto de Sistemas) com especialização em Gestão de Entrega. Especialização em domínios empresariais: Operações Bancárias e Comércio, Governo Electrónico, Gestão do Ciclo de Vida do Produto, Transformações Ágeis, e Simulações Informáticas na Investigação Científica.
-
-Principal enfoque profissional na incorporação de produtos de qualidade através de uma equipa cada vez mais eficaz, performante e estável através de práticas disciplinadas de Entrega Ágil à Escala.
-
-
-### Sviatlana Kastsenka (DBA, Backend Developer, Cloud Engineer)
-
-Começou a trabalhar na indústria das TI com cartões perfurados, nas origens da e-Governança na Bielorrússia, actualmente na posição de Chefe Técnico, com os seus conhecimentos e experiência (mais de 40 anos) defende a posição em cada novo projecto internacional de terceirização de concursos dos empregadores.
-
-Responsável pelas bases de dados de alta-carga de dados de alta qualidade, arquitectura de nuvens, e grandes dados.
