@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -uses: action/checkout@main
-      -uses: jakejarvis/s3-sync-action@main
-       with:
+    - uses: action/checkout@main
+    - uses: jakejarvis/s3-sync-action@main
+      with:
         args: --acl public-read --follow-symlinks --delete
