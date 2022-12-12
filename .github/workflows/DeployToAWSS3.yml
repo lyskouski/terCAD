@@ -7,7 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: action/checkout@main
     - uses: jakejarvis/s3-sync-action@main
@@ -17,5 +16,3 @@ jobs:
          aws-s3-bucket:${{secrets.AWS_S3_BUCKET}}
          aws-access-key-id:${{secrets.AWS_ACCESS_KEY_ID}}
          aws-secret-access-key:${{secrets.AWS_SECRET_ACCESS_KEY}}
-
-      -run: aws s3 sync . s3://tercad.pt --exclude '.git*/*'
