@@ -40,4 +40,4 @@ On a minefield you have to be the slowest turtle and you'll return back alive, i
 
 ## Solution (why we)
 
-Scientific Research for the course would be a main corner in our StartUp evolution model, at list, that’ll confirm that the deep analysis and meticulously was preliminary done as a pre-step of creation.
+Scientific Research for the course would be a main corner in our StartUp evolution model, at list, that’ll confirm that the deep analysis was preliminary and meticulously done as a pre-step of creation.

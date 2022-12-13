@@ -40,4 +40,4 @@ Auf einem Minenfeld muss man die langsamste Schildkröte sein und man kehrt lebe
 
 ## Lösung (warum wir)
 
-Wissenschaftliche Forschung für den Kurs würde eine Hauptecke in unserem StartUp-Evolutionsmodell sein, an der Liste, die bestätigt, dass die tiefe Analyse und akribisch im Vorfeld als Vorstufe der Schöpfung getan wurde.
+Wissenschaftliche Forschung für den Kurs würde eine Hauptecke in unserem StartUp-Evolutionsmodell sein, an der Liste, die bestätigt, dass die tiefe und akribisch Analyse im Vorfeld als Vorstufe der Schöpfung getan wurde.
