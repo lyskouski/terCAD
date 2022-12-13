@@ -10,8 +10,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
-
-    - name: Configure AWS Credentials
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
       env:
