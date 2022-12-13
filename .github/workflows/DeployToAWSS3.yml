@@ -12,7 +12,6 @@ jobs:
       uses: actions/checkout@main
 
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
       env:
@@ -20,7 +19,6 @@ jobs:
          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
          AWS_REGION: ${{ secrets.AWS_REGION }}
-         AWS-REGION: 'us-east-1'
 
     - name: Deploy static site to S3 bucket
       run: aws s3 sync . ${{ secrets.AWS_S3_BUCKET }}
